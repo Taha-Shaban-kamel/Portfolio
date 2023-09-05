@@ -146,11 +146,17 @@ body {
 
 .logo {
     font-size: 25px;
-    color: var(--wh-color);
+    color: transparent;
+    animation: logo,slideTop;
+    animation-duration: 1s,1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite,1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
     font-weight: 600;
     pointer-events: none;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
 }
 
 .navbar a {
@@ -227,7 +233,7 @@ body {
     animation-iteration-count: 1, infinite;
     animation-delay: 1s, 1ms;
     color: transparent;
-    -webkit-text-stroke: .7px var(--text-color);
+    -webkit-text-stroke: 1px var(--text-color);
     background-image: linear-gradient(var(--text-color), var(--wh-color));
     background-repeat: no-repeat;
     background-clip: text;
@@ -652,6 +658,10 @@ span {
     width: 90%;
 }
 
+.skills-column:nth-child(2) .progress:nth-child(5) .bar span {
+    width: 90%;
+}
+
 /* skills section design end */
 
 .portfolio {
@@ -669,7 +679,7 @@ span {
 }
 
 .portfolio .projectsRow .project {
-    margin: 0.625rem 0;
+    margin: 2rem 0;
 }
 
 .portfolio .projectsRow .project  .img {
@@ -773,9 +783,6 @@ span {
     background: var(--secoundBg-color);
 }
 
-.contact form {
-    text-align: center;
-}
 
 .contact form .input-box {
     position: relative;
@@ -807,7 +814,6 @@ span {
 .contact form .textarea-field textarea::placeholder {
 
     color: var(--text-color);
-    text-align: center;
 
 
 }
@@ -1005,6 +1011,18 @@ input::-webkit-inner-spin-button {
 
 }
 
+@keyframes logo {
+    0%,50%{
+        background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);;
+    }
+
+    70%,80%,100%{
+        background-image:linear-gradient(to left, #12c2e9, #c471ed, #f64f59);;
+    }
+
+
+
+}
 
 
 /* BREACK POINTS */
@@ -1122,5 +1140,9 @@ input::-webkit-inner-spin-button {
 
     .footer {
         flex-direction: column-reverse;
+    }
+
+    .projectsRow{
+        display: block!important;
     }
 }

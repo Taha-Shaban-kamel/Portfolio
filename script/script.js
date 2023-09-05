@@ -1,6 +1,4 @@
-
 // toggle icon navbar 
-
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
@@ -9,11 +7,10 @@ menuIcon.onclick = () => {
 }
 
 // scroll secitons 
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
-
+  // move navbar links with curent section 
   sections.forEach(sec => {
     let top = window.scrollY;
     let offset = sec.offsetTop - 100;
@@ -28,14 +25,15 @@ window.onscroll = () => {
 
   })
 
-
-
+  // stay header on Top 
   let header = document.querySelector('header');
-
   header.classList.toggle('sticky', window.scrollY > 100);
-
-  menuIcon.classList.remove('bx-x');
-  navbar.classList.remove('active');
-
 }
 
+
+
+// CopyRight 
+
+let year = document.querySelector("footer  .footer-text .year");
+
+year.innerHTML =  new Date().getFullYear();
