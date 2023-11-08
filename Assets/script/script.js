@@ -88,7 +88,7 @@ skillsList.addEventListener('click', (e) => {
       let  p = document.createElement('p');
       let hr = document.createElement('hr');
       let img = document.createElement('img');
-      img.setAttribute("src",`image/skillsImages/${skill}.png`);
+      img.setAttribute("src",`Assets/image/skillsImages/${skill}.png`);
       img.classList.add('skills-img');
       li.classList.add('skill-content');
       div.classList.add('skill');

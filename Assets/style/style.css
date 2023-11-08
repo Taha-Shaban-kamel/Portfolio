@@ -230,8 +230,9 @@ body {
 }
 
 .home-content h3 {
+    width: 100%;
     position: relative;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     opacity: 0;
     animation-name: slideLeft, homeBgText;
@@ -331,8 +332,8 @@ body {
 
 .home-img {
     position: relative;
-    width: 26em;
-    height: 26em;
+    width: 20em;
+    height: 20em;
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
     animation-delay: 2.1s, 3.1s;
@@ -342,8 +343,8 @@ body {
 
 .home-img .glowing-circle {
     position: relative;
-    width: 26em;
-    height: 26em;
+    width: 20em;
+    height: 20em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -362,8 +363,8 @@ body {
 .glowing-circle span {
     position: absolute;
     inset: 0;
-    width: 26em;
-    height: 26em;
+    width: 20em;
+    height: 20em;
     background: var(--bg-linear1);
     border-radius: 50%;
     animation: circalRotate 5s linear infinite;
@@ -386,12 +387,14 @@ body {
 
 .image img {
     position: absolute;
-    top: -90px;
-    right: 50%;
-    transform: translate(50%);
+    top: 50%;
+    right: -50%;
+    transform: translate(-50%,-50%);
     max-width: 350px;
     object-fit: cover;
+    width: 18rem;
 }
+
 
 .homeImgHover {
     position: absolute;
