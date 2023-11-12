@@ -5,8 +5,6 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 }
-
-
 // scroll secitons 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -20,10 +18,9 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach(links => {
         links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+        document.querySelector(`header nav a[href*=${id}]`).classList.add('active');
       })
     }
-
   })
 
   // stay header on Top 
@@ -112,10 +109,8 @@ skillsList.addEventListener('click', (e) => {
 })
 
 
-// CopyRight 
 
 let year = document.querySelector("footer  .footer-text .year");
 
 year.innerHTML = new Date().getFullYear();
-
 
